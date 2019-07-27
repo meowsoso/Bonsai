@@ -1,0 +1,12 @@
+<%= form_for @comment do |f| %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+    <%= f.label :emotion %>
+    <%= f.text_field :emotion %>
+    <%= f.label :score %>
+    <%= f.text_field :score %>
+
+    <%= f.submit %>
+    <% end %>

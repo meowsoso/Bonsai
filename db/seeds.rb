@@ -11,11 +11,11 @@ t2 = Team.create :name => 'Marvel'
 
 Comment.destroy_all
 puts "creating comments"
-c1 = Comment.create :content => "I hate this place", :category => 'environment', :post_date => '2019-6-8', :emotion => 'sad' 
-c2 = Comment.create :content => "I love this place", :category => 'environment', :post_date => '2019-6-8', :emotion => 'happy' 
-c3 = Comment.create :content => "I hate people", :category => 'relationship', :post_date => '2019-6-5', :emotion => 'angry' 
-c4 = Comment.create :content => "I am good", :category => 'others', :post_date => '2019-6-8', :emotion => 'happy' 
-c5 = Comment.create :content => "I dont care", :category => 'environment', :post_date => '2019-6-8', :emotion => 'sad' 
+c1 = Comment.create :content => "I hate this place", :category => 'environment', :post_date => '2019-6-8', :emotion => 'sad', :score => 8
+c2 = Comment.create :content => "I love this place", :category => 'environment', :post_date => '2019-6-8', :emotion => 'happy', :score => 9
+c3 = Comment.create :content => "I hate people", :category => 'relationship', :post_date => '2019-6-5', :emotion => 'angry', :score => 8 
+c4 = Comment.create :content => "I am good", :category => 'others', :post_date => '2019-6-8', :emotion => 'happy', :score => 8 
+c5 = Comment.create :content => "I dont care", :category => 'environment', :post_date => '2019-6-8', :emotion => 'sad', :score => 8 
 
 Task.destroy_all
 puts "creating tasks"

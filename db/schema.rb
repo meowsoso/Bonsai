@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_051324) do
     t.text "category"
     t.date "post_date"
     t.text "emotion"
+    t.integer "score"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
