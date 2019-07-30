@@ -3,8 +3,9 @@
 * {box-sizing: border-box;}
 
 body {
-  max-width: 1200px;
+  max-width: 1300px;
 }
+
 // Button used to open the chat form - fixed at the bottom of the page 
 .raindrop {
   position: absolute;
@@ -57,7 +58,7 @@ body {
 .anim, .anim svg {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 900px;
 }
 .anim path {
   stroke-width: 5;
@@ -191,7 +192,7 @@ canvas#background {
   top: 0;
   left: 0;
   display: flexbox;
-  z-index: -1
+  z-index: -2
 }
 
 canvas.storm {
@@ -199,28 +200,82 @@ canvas.storm {
     filter: brightness(50%);
 }
 
+canvas.thunderBackground{
+    animation: storm 1.5s ease 0s 1 normal;
+}
+  
+@keyframes storm {
+    0% { filter: saturate(0.5) brightness(20%);}
+    40% { filter: saturate(0.7) brightness(160%);}
+    55% { filter: saturate(0.5) brightness(60%);}
+    70% { filter: saturate(0.7) brightness(190%);}
+    100% { filter: saturate(0.5) brightness(50%);}
+}
+  
+
+canvas.sunriseBg {
+    background: url('sun_rise.jpg');
+    filter:  brightness(90%) contrast(90%) hue-rotate(60deg);
+    animation: backgroundSunRise  20s ease-out 0s 1 normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundSunRise {
+    0% { filter: brightness(90%) contrast(90%) hue-rotate(60deg);}
+    50% { filter: brightness(95%) contrast(95%) hue-rotate(30deg);}
+    100% { filter: brightness(100%) contrast(100%) hue-rotate(0deg);}
+}
+
+canvas.blossom {
+    background: url('sakura.jpg');
+
+}
+
 
 div.sunrise {
-  position: absolute;
+  position: fixed;
   display: flexbox;
   width: 100px;
   height: 100px;
-  background-image: linear-gradient(to bottom, rgb(211, 91, 35) 0%,rgba(255, 213, 25, 0.42) 68%,rgba(255, 201, 25, 0) 100%);
-  top: 60%;
+  background-image: linear-gradient(to bottom, rgb(211, 91, 35) 40%,rgba(255, 213, 25, 1) 68%,rgba(255, 201, 25, 1) 100%);
+  box-shadow: 0px 0px 60px 20px rgba(223, 187, 30, 0.6);
+  top: 50%;
   left: 10%;
   border-radius: 50%;
+  animation: rise  20s ease-out 0s 1 normal;
+  animation-fill-mode: forwards;
 }
 
-// div.sun{
-//   position: absolute;
-//   display: flexbox;
-//   width: 130px;
-//   height: 130px;
-//   background-image: radial-gradient(#f8b500 20%, #FFD200 50%, #fceabb 90%);
-//   top: 10%;
-//   left: 30%;
-//   border-radius: 50%;
-// } 
+@keyframes rise {
+    0% { transform: translateX(0) translateY(0); filter: brightness(70%) saturate(70%); }
+    25% { transform: translateX(50px) translateY(-60px); filter: brightness(80%) saturate(80%);}
+    40% { transform: translateX(65px) translateY(-70px); filter: brightness(85%) saturate(85%);}
+    50% {transform: translateX(80px) translateY(-80px); filter: brightness(95%) saturate(90%);}
+    75% {transform: translateX(120px) translateY(-110px); filter: brightness(100%) saturate(95%);}
+    100% {transform: translateX(150px) translateY(-150px); filter: brightness(110%) saturate(100%);}
+}
+
+
+div.sunNoon{
+  position: fixed;
+  display: flexbox;
+  width: 130px;
+  height: 130px;
+  background-image: radial-gradient(#f8b500 20%, #FFD200 50%, #fceabb 90%);
+  top: 10%;
+  left: 15%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px 20px rgba(223, 156, 30, 0.6);
+  animation: shinningSun 3s ease-out 0s infinite normal;
+} 
+
+@keyframes shinningSun {
+    0% { filter: brightness(100%) contrast(100%) hue-rotate(0deg); box-shadow: 0px 0px 50px 30px rgba(223, 156, 30, 0.8);}
+    50% { filter: brightness(130%) contrast(100%) hue-rotate(5deg);box-shadow: 0px 0px 40px 50px rgba(223, 101, 30, 0.7);}
+    100% { filter: brightness(100%) contrast(100%) hue-rotate(0deg);box-shadow: 0px 0px 50px 30px rgba(223, 156, 30, 0.8);}
+}
+
+
 
 div.sunset{
   position: absolute;
@@ -235,60 +290,36 @@ div.sunset{
 }
 
 div.pedal {
-  background: url('../images/sakura_pedal.png');
+  background: url('sakura_pedal.png');
   background-size: cover;
-  position: absolute;
+  position: fixed;
   display: flexbox;
   width: 50px;
   height: 50px;
-  left: 50%;
+  left: 85%;
   top: 5%;
   visibility: hidden;
 }
 
 div.pedal1 {
-  background: url('../images/sakura_pedal.png');
+  background: url('sakura_pedal.png');
   background-size: cover;
-  position: absolute;
+  position: fixed;
   display: flexbox;
   width: 50px;
   height: 50px;
-  left: 50%;
+  left: 85%;
   top: 5%;
-}
-// storm background 
-// canvas#background {
-//   /* background: linear-gradient(to bottom, #442d63 0%,#e04e8b 40%,#fff56b 85%); */
-//   background: url('../images/the_great_wave.jpg');
-//   filter: saturate(0.5) brightness(50%);
-//   background-size: cover;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   display: flexbox;
-//   z-index: -1;
-// }
-
-canvas.thunderBackground{
-  animation: storm 1.5s ease 0s 1 normal;
-}
-
-@keyframes storm {
-  0% { filter: saturate(0.5) brightness(20%);}
-  40% { filter: saturate(0.7) brightness(160%);}
-  55% { filter: saturate(0.5) brightness(60%);}
-  70% { filter: saturate(0.7) brightness(190%);}
-  100% { filter: saturate(0.5) brightness(50%);}
 }
 
 div.tree {
   position: fixed;
   left: 5%;
   bottom: 0;
-  height: 300px;
-  min-width: 280px;
+  height: 230px;
+  min-width: 230px;
   display: inline-block;
-  background: url('../images/jptree.png');
+  background: url('jptree.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -337,7 +368,7 @@ div.normalTree {
   .fire {
     display: inline-block;
     position: relative;
-    background: url('../images/fire.png');
+    background: url('fire.png');
     background-position: center;
     background-size: cover;
     top: 10%;

@@ -95,7 +95,7 @@ function moveClouds() {
 
 // create white clouds 
 const sunnyCloud = function (positionX, positionY) {
-  $('.centered-clouds>li').css("background-color", "white");
+  $('.centered-clouds>li').css("background-color", "rgb(230, 230, 230)");
   $('div.cloud').clone().delay(1500).css({
     'visibility': 'visible',
     'left': positionX +'px',
@@ -118,11 +118,10 @@ const fallSakura = function () {
     anime({
     targets: 'div.pedal1',
     translateX: function() {
-      return anime.random(-1500, 1500);
+      return anime.random(-2000, 0);
     },
     translateY: 800,
     rotate: 360,
-    direction: 'alternate',
     loop: true,
     easing: 'easeInOutQuad',
     duration: 7000,
@@ -130,10 +129,7 @@ const fallSakura = function () {
   });
 }
 
-$('div.pedal').on('click', function() {
-  fallSakura();
-  $(this).off();
-});
+
 
 // move fire when clicked 
 $('div.fire').on('click', function () {
@@ -144,11 +140,11 @@ $('div.fire').on('click', function () {
 });
 
 // hoverover happy tree
-// $('div.tree').on('mouseover', function () {
-//   $(this).addClass('happyTree').on('mouseout', function () {
-//     $(this).removeClass('happyTree');
-//   });
-// })
+$('div.tree').on('mouseover', function () {
+  $(this).addClass('happyTree').on('mouseout', function () {
+    $(this).removeClass('happyTree');
+  });
+})
 
 // click on a normal tree
 // $('div.tree').on('click', function () {
@@ -166,7 +162,7 @@ $('div.fire').on('click', function () {
 
 
 // storm scenario
-if ( gon.score < 6 ) {
+if ( gon.score < 0 ) {
   $('canvas#background').addClass('storm');
   createCloud(400, 170);
   createCloud(350, 100);
@@ -191,8 +187,31 @@ $(window).click(function(e) {
 createLight(relativeX, relativeY);
 });
 };
+// sun rise
+if ( gon.score < 0) {
+  $('canvas#background').addClass('sunriseBg');
+  $('div.sun').addClass('sunrise');
+}
+
+if ( true ) {
+  $('canvas#background').addClass('blossom');
+  $('div.sun').addClass('sunNoon');
+  $('div.pedal').css('visibility', 'visible');
+  sunnyCloud(500, 120);
+  sunnyCloud(800, 200);
+  moveClouds();
+
+  $('div.pedal').on('click', function() {
+    if ($('div.pedal1').length > 0) {
+      $('div.pedal1').remove();
+    } else {
+    fallSakura();
+    }
+  });
+}
 
 
+// cherry blossom
 
 
 });
