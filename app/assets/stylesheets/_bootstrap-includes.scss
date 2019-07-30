@@ -1,0 +1,372 @@
+@import "bootstrap";
+
+* {box-sizing: border-box;}
+
+body {
+  max-width: 1200px;
+}
+// Button used to open the chat form - fixed at the bottom of the page 
+.raindrop {
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(54, 230, 230, 0.4);
+  border-radius: 50%;
+  left: 200px;
+  top: 10px;
+
+}
+
+.rain {
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(54, 230, 230, 0.4);
+  border-radius: 50%;
+  left: 200px;
+  top: 10px;
+
+}
+
+.rain2 {
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(86, 143, 197, 0.5);
+  border-radius: 50%;
+  left: 200px;
+  top: 10px;
+
+}
+
+.rain3 {
+  position: absolute;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(20, 177, 240, 0.6);
+  border-radius: 50%;
+  left: 200px;
+  top: 10px;
+
+}
+
+.anim, .anim svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.anim path {
+  stroke-width: 5;
+  stroke: rgb(240, 240, 115);
+}
+
+div.cloud{
+  position: absolute;
+  display: flexbox;
+  width: 25%;
+  height: 15%;
+  top: 15%;
+  visibility: hidden
+}
+div.cloud1{
+  position: absolute;
+  display: flexbox;
+  width: 25%;
+  height: 15%;
+  top: 15%;
+  visibility: hidden
+}
+.centered-clouds{
+  position: relative;
+  top: 20%;
+  z-index: 3;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 105px;
+  text-align: center;
+  list-style: none;
+  transform: scaleY(-1) translateY(125px);
+}
+
+
+@keyframes cloud {
+  0%{
+    height: 100px;
+    width: 100px;
+  }
+  50%{
+    height: 50px;
+    width: 50px;
+  }
+  100%{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@keyframes cloud-mini {
+  0%{
+    height: 40px;
+    width: 40px;
+  }
+  50%{
+    height: 60px;
+    width: 60px;
+  }
+  100%{
+    height: 40px;
+    width: 40px;
+  }
+}
+@keyframes cloud-big {
+  0%{
+    height: 115px;
+    width: 115px;
+  }
+  50%{
+    height: 75px;
+    width: 75px;
+  }
+  100%{
+    height: 115px;
+    width: 115px;
+  }
+}
+
+.centered-clouds>li{
+  background-color: rgb(156, 150, 150);
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 100px;
+  margin: 0 -10px;
+  border-bottom-left-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+
+.centered-clouds>li:nth-child(3){
+  animation: cloud-big 50s ease-in-out infinite -25s;
+}
+
+.centered-clouds>li:nth-child(2){
+  animation: cloud 23s ease-in-out infinite -8s;
+}
+
+.centered-clouds>li:first-child{
+  border-top-left-radius: 1000px;
+  animation: cloud-mini 10s ease-in-out infinite -55s;
+}
+
+.centered-clouds>li:last-child{
+  border-top-right-radius: 1000px;
+  animation: cloud-mini 7s ease-in-out infinite -60s;
+}
+
+// canvas#background {
+//   background: linear-gradient(to bottom, #3a1964 0%,#5695d1 50%,#cce65d 85%);
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   display: flexbox;
+//   z-index: -1
+// }
+
+// canvas#background {
+//   background: linear-gradient(to bottom, #5de4e9 0%,#82f4f8 60%,#b4a75a 85%);
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   display: flexbox;
+//   z-index: -1
+// }
+
+canvas#background {
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flexbox;
+  z-index: -1
+}
+
+canvas.storm {
+    background: url('the_great_wave.jpg');
+    filter: brightness(50%);
+}
+
+
+div.sunrise {
+  position: absolute;
+  display: flexbox;
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgb(211, 91, 35) 0%,rgba(255, 213, 25, 0.42) 68%,rgba(255, 201, 25, 0) 100%);
+  top: 60%;
+  left: 10%;
+  border-radius: 50%;
+}
+
+// div.sun{
+//   position: absolute;
+//   display: flexbox;
+//   width: 130px;
+//   height: 130px;
+//   background-image: radial-gradient(#f8b500 20%, #FFD200 50%, #fceabb 90%);
+//   top: 10%;
+//   left: 30%;
+//   border-radius: 50%;
+// } 
+
+div.sunset{
+  position: absolute;
+  display: flexbox;
+  width: 160px;
+  height: 160px;
+  background-image: linear-gradient(to bottom, rgb(226, 35, 9) 0%,rgba(226, 123, 26, 0.7) 68%,rgba(255,222,25, 0.5) 100%);
+  box-shadow: 5px 5px 20px 10px rgba(221, 51, 9, 0.4);
+  top: 35%;
+  left: 85%;
+  border-radius: 50%;
+}
+
+div.pedal {
+  background: url('../images/sakura_pedal.png');
+  background-size: cover;
+  position: absolute;
+  display: flexbox;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 5%;
+  visibility: hidden;
+}
+
+div.pedal1 {
+  background: url('../images/sakura_pedal.png');
+  background-size: cover;
+  position: absolute;
+  display: flexbox;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 5%;
+}
+// storm background 
+// canvas#background {
+//   /* background: linear-gradient(to bottom, #442d63 0%,#e04e8b 40%,#fff56b 85%); */
+//   background: url('../images/the_great_wave.jpg');
+//   filter: saturate(0.5) brightness(50%);
+//   background-size: cover;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   display: flexbox;
+//   z-index: -1;
+// }
+
+canvas.thunderBackground{
+  animation: storm 1.5s ease 0s 1 normal;
+}
+
+@keyframes storm {
+  0% { filter: saturate(0.5) brightness(20%);}
+  40% { filter: saturate(0.7) brightness(160%);}
+  55% { filter: saturate(0.5) brightness(60%);}
+  70% { filter: saturate(0.7) brightness(190%);}
+  100% { filter: saturate(0.5) brightness(50%);}
+}
+
+div.tree {
+  position: fixed;
+  left: 5%;
+  bottom: 0;
+  height: 300px;
+  min-width: 280px;
+  display: inline-block;
+  background: url('../images/jptree.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+div.happyTree {
+  animation: happy 2s ease 0s infinite normal;
+}
+
+@keyframes happy {
+  0% { filter: hue-rotate(0deg);}
+  25% { filter: hue-rotate(90deg);}
+  50% { filter: hue-rotate(180deg);}
+  75% { filter: hue-rotate(270deg);}
+  100% { filter: hue-rotate(0deg);}
+}
+
+div.sadTree {
+  animation: turnBlack 20s linear 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes turnBlack {
+  0% { filter: grayscale(0%) sepia(0);}
+  100% { filter: grayscale(100%) sepia(0.7);}
+}
+
+div.normalTree {
+  animation: shake 4s ease 1s 1 normal;
+}
+@keyframes shake {
+  0%{ transform: rotate(-15deg); -ms-transform: rotate(-15deg); }
+  2%{ transform: rotate(15deg); -ms-transform: rotate(15deg); }
+  4%{ transform: rotate(-18deg); -ms-transform: rotate(-18deg); }
+  6%{ transform: rotate(18deg); -ms-transform: rotate(18deg); }
+  8%{ transform: rotate(-22deg); -ms-transform: rotate(-22deg); }
+  10%{ transform: rotate(22deg); -ms-transform: rotate(22deg); }
+  12%{ transform: rotate(-18deg); -ms-transform: rotate(-18deg); }
+  14%{ transform: rotate(18deg); -ms-transform: rotate(-18deg); }
+  16%{ transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
+  18%{ transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
+  20%{ transform: rotate(0deg); -ms-transform: rotate(0deg); }
+  }
+
+  .fire {
+    display: inline-block;
+    position: relative;
+    background: url('../images/fire.png');
+    background-position: center;
+    background-size: cover;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+    width: 40px;
+    height:50px;
+    animation: lightChange 4s infinite;
+    visibility: hidden; 
+  }
+
+ div.two {
+   top: 30%;
+   left: 50%;
+ }
+ div.three {
+  top: 15%;
+  left: 30%;
+}
+div.four {
+  top: 40%;
+  left: 60%;
+}
+
+@keyframes lightChange {
+  0% { filter: brightness(70%);}
+  40% { filter: contrast(1) brightness(80%);}
+  50% { filter: contrast(2) brightness(110%);}
+  60% { filter: sepia(1) contrast(2) brightness(110%);}
+  80% { filter: contrast(1) brightness(80%); }
+  100% { filter: brightness(70%);}
+} 

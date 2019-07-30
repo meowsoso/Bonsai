@@ -1,2 +1,37 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if @score.present? && @score > 2 %>
+<%= @score %>
+<% end %>
+
+<div class="cloud">
+    <ul class="centered-clouds">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+<div class="raindrop"></div>
+
+<div class="anim">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+    <g fill="none" fill-rule="evenodd">
+      <path d="" stroke-dasharray="undefined" style="stroke-dashoffset: 0px;"></path>
+  </g></svg>
+</div>
+<canvas id="background"></canvas>
+<div class="sun">
+</div>
+
+<div class="pedal">
+</div>
+
+
+<div class="tree">
+  <div class="fire"></div>
+  <div class="fire two"></div>
+  <div class="fire three"></div>
+  <div class="fire four"></div>
+</div>

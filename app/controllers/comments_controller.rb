@@ -4,13 +4,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.create comment_params
-    comment.update_attribute(:user_id, @current_user.id)
-    redirect_to comment
+    @comment = Comment.create comment_params
+    @comment.update_attribute(:user_id, @current_user.id)
+    redirect_to root_path
   end
 
   def edit
     @comment = Comment.find params[:id]
+    gon.current_user = @current_user
   end
 
   def update 
