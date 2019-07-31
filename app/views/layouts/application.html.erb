@@ -4,13 +4,15 @@
     <title>Project1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= Gon::Base.render_data %>
+    <%= cloudinary_js_config %>
+
   </head>
 
   <body>
+  <nav>
   <%= link_to "Home", root_path %>
   <% if @current_user.present? %>
     <%= link_to "Edit Profile", edit_user_path %>
@@ -22,6 +24,7 @@
   <%= link_to "Sign up", new_user_path %>
   <%= link_to "Sign in", login_path %>
   <% end %>
+  </nav>
     <%= yield %>
   </body>
 </html>

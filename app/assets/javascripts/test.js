@@ -103,8 +103,6 @@ const sunnyCloud = function (positionX, positionY) {
   }).addClass('cloud1').removeClass('cloud').appendTo('body');
 }
 
-
-
 // create pedals
 const createPedal = function (num) {
   for (let i = 0; i < num; i++) {
@@ -129,40 +127,19 @@ const fallSakura = function () {
   });
 }
 
-
-
 // move fire when clicked 
-$('div.fire').on('click', function () {
-  $(this).css({
-    'top': `${getRandomInt(0, 100)}%`,
-    'left': `${getRandomInt(0, 100)}%`
-  })
-});
-
-// hoverover happy tree
-$('div.tree').on('mouseover', function () {
-  $(this).addClass('happyTree').on('mouseout', function () {
-    $(this).removeClass('happyTree');
+if ($('div.angry').length > 0) {
+  $('div.fire').css('visibility', 'visible').appendTo('div.angry')
+  $('div.fire').on('click', function () {
+    $(this).css({
+      'top': `${getRandomInt(0, 100)}%`,
+      'left': `${getRandomInt(0, 100)}%`
+    })
   });
-})
-
-// click on a normal tree
-// $('div.tree').on('click', function () {
-//   $(this).toggleClass('normalTree');
-// })
-
-
-// sunnyCloud(500, 120);
-// sunnyCloud(400, 250);
-// sunnyCloud(600, 350);
-// moveClouds();
-
-
-
-
+}
 
 // storm scenario
-if ( gon.score < 0 ) {
+if ( false ) {
   $('canvas#background').addClass('storm');
   createCloud(400, 170);
   createCloud(350, 100);
@@ -188,10 +165,12 @@ createLight(relativeX, relativeY);
 });
 };
 // sun rise
-if ( gon.score < 0) {
+if ( false ) {
   $('canvas#background').addClass('sunriseBg');
   $('div.sun').addClass('sunrise');
 }
+
+// cherry blossom
 
 if ( true ) {
   $('canvas#background').addClass('blossom');
@@ -209,9 +188,5 @@ if ( true ) {
     }
   });
 }
-
-
-// cherry blossom
-
 
 });

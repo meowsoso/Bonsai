@@ -1,10 +1,10 @@
 <%= form_for @comment do |f| %>
-    <%= f.label :content %>
+    <%= f.label :content, "Comment"%>
     <%= f.text_field :content %>
     <%= f.label :category %>
-    <%= f.text_field :category %>
+    <%= f.select :category, options_for_select(["work", "human resource", "environment", "other"]), :class => 'genForm_dropBox' %>
     <%= f.label :emotion %>
-    <%= f.text_field :emotion %>
+    <%= f.select :emotion, options_for_select([["Select One", ""], "happy", "sad", "angry", "alright"]), :class => 'genForm_dropBox' %>
     <%= f.label :score %>
     <%= f.text_field :score %>
 

@@ -52,3 +52,5 @@ gem "jquery-rails", "~> 4.3"
 gem 'rails_12factor', group: :production
 gem 'bootstrap'
 gem 'gon'
+gem 'cloudinary'
+gem 'font-awesome-sass', '~> 5.9.0'
