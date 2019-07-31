@@ -1,10 +1,22 @@
 class PagesController < ApplicationController
-  def home
-    @score = background
+  before_action :check_for_login
+  before_action :check_for_daily_comment, :only => [:garden, :team]
+
+  def new
+  end
+
+  def garden
+
+    @user = User.find @current_user.id
+    @person_score = @user.comments.last.score
+    gon.person_score = @person_score
+  end
+  
+  def team
+    @score = team_score
+    gon.score = @score
     user = User.find @current_user.id
     @team = user.team
-    @comment = user.comments.last.content
-    gon.score = @score
   end
 
 
@@ -12,8 +24,10 @@ class PagesController < ApplicationController
   private
   # get average emotion score from the date
   # TODO: change it to only get average of current team
-  def background
-    emotion_scores = Comment.where('created_at BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).average(:score)
+  def team_score
+    team_member = @current_user.team.users
+    team_comment = Comment.where(user_id: team_member.pluck('id'))
+    emotion_scores = team_comment.where('created_at BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).average(:score)
     emotion_scores
   end
 

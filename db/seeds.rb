@@ -2,7 +2,13 @@ User.destroy_all
 puts "creating users"
 u1 = User.create :name => 'Bruce Wayne', :email => 'bruce@batman.com', :admin => true, :password => '123'
 u2 = User.create :name => 'Robin Hood', :email => 'robin@hood.com', :admin => false, :password => '123'
-u3 = User.create :name => 'May May', :email => 'may@may.com', :admin => false, :password => '123'
+u3 = User.create :name => 'Lay May', :email => 'may1@may.com', :admin => false, :password => '123'
+u4 = User.create :name => 'Bay May', :email => 'may2@may.com', :admin => false, :password => '123'
+u5 = User.create :name => 'Cay May', :email => 'may3@may.com', :admin => false, :password => '123'
+u6 = User.create :name => 'Pay May', :email => 'may4@may.com', :admin => false, :password => '123'
+u7 = User.create :name => 'Hay May', :email => 'may5@may.com', :admin => false, :password => '123'
+
+
 
 Team.destroy_all 
 puts "creating teams"
@@ -29,6 +35,9 @@ puts "associations"
 t1.users << u1
 t1.users << u2
 t2.users << u3
+t1.users << u4 << u5
+t2.users << u6 << u7
+
 
 # users and comments
 u1.comments << c1 << c2 << c3

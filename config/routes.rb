@@ -21,10 +21,13 @@
 #              DELETE /login(.:format)             session#destroy
 
 Rails.application.routes.draw do
-  root :to => 'pages#home'
+  root :to => 'pages#new'
+  get 'garden' => 'pages#garden', :as => :garden
+  get 'garden/team' => 'pages#team', :as => :garden_team
   resources :users, :only => [:new, :create, :update, :index]
   get '/users/edit' => 'users#edit', :as => :edit_user
   resources :comments
+  
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

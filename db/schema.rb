@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_051324) do
 
   create_table "teams", force: :cascade do |t|
     t.text "name"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,8 +46,8 @@ ActiveRecord::Schema.define(version: 2019_07_26_051324) do
     t.text "name"
     t.text "email"
     t.boolean "admin", default: false
-    t.integer "team_id"
     t.string "password_digest"
+    t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,45 @@
+<h2>My Zen</h2>
+
+<% if @message.present? %>
+<p><%= @message %></p>
+<% end %>
+
+
+<div class="tree <%= @user.comments.last.emotion %> userTree">
+    <p class="treeTag"><%= @user.comments.last.content %></p>
+        <%= link_to @user.name, comment_path(@user.id) %>
+</div>
+
+<div class="gardenSwap">
+<%= link_to image_tag('swap.png'), garden_team_path %>
+</div>
+
+<div class="cloud">
+    <ul class="centered-clouds">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+<div class="raindrop"></div>
+
+<div class="anim">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+    <g fill="none" fill-rule="evenodd">
+      <path d="" stroke-dasharray="undefined" style="stroke-dashoffset: 0px;"></path>
+  </g></svg>
+</div>
+<canvas id="background"></canvas>
+<div class="sun">
+</div>
+
+<div class="pedal">
+</div>
+
+
+  <div class="fire one"></div>
+  <div class="fire two"></div>
+  <div class="fire three"></div>
+  <div class="fire four"></div>

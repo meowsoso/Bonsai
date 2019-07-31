@@ -3,13 +3,17 @@ class CommentsController < ApplicationController
 
 
   def new
+    if @current_user.comments.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).present?
+      @message = "You already posted your feelings today."
+      redirect_to garden_path 
+    end
     @comment = Comment.new
   end
 
   def create
     @comment = Comment.create comment_params
     @comment.update_attribute(:user_id, @current_user.id)
-    redirect_to root_path
+    redirect_to garden_path
   end
 
   def edit

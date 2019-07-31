@@ -14,7 +14,7 @@
     <%= f.label :email %>
     <%= f.email_field :email %>
     <%= f.label :team_id %>
-    <%= f.text_field :team_id %>
+    <%= f.select :team_id, Team.all.collect { |t| [t.name, t.id] } %>
     <%= f.label :password %>
     <%= f.password_field :password %>
     <%= f.label :password_confirmation %>
