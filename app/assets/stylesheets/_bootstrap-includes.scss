@@ -79,15 +79,27 @@ div.monkey {
     position: absolute;
     display: flexbox;
     min-width: 20%;
-    height: 50%; 
+    height: 65%; 
     left: 20%;
-    top: 10%;
+    top: 15%;
     background: url('monkey.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border:15px solid #dceaec;
 }
 
+div.redMonkey {
+    position: absolute;
+    display: flexbox;
+    min-width: 35%;
+    height: 55%;
+    left: 20%;
+    top: 15%;
+    background: url('red_monkey.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:15px solid #dceaec;
+}
 
 div#signUp {
     text-align: right;

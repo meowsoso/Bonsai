@@ -8,8 +8,8 @@ class PagesController < ApplicationController
   def garden
 
     @user = User.find @current_user.id
-    @person_score = @user.comments.last.score
-    gon.person_score = @person_score
+    @score = @user.comments.last.score
+    gon.score = @score
   end
   
   def team

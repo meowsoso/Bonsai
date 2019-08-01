@@ -1,4 +1,7 @@
-<h1>Comments#show</h1>
+<div class="userBackground">
+</div>
+
+<h1>Comments history</h1>
 <div class ="showComment">
 <div class="row justify-content-md-center">
     <div class="col col-md-3">
@@ -33,4 +36,4 @@
 
 </div>
 
-    <%= link_to "Back", edit_comment_path(@current_user) %>
+    <%= link_to "Back", edit_comment_path(@current_user.comments.last) %>

@@ -139,7 +139,7 @@ if ($('div.angry').length > 0) {
 }
 
 // storm scenario
-if ( false ) {
+if ( gon.score > 6 ) {
   $('canvas#background').addClass('storm');
   createCloud(400, 170);
   createCloud(350, 100);
@@ -163,17 +163,12 @@ $(window).click(function(e) {
   const relativeY = (e.pageY - $(e.target).offset().top);
 createLight(relativeX, relativeY);
 });
-};
 // sun rise
-if ( false ) {
+} else if ( gon.score > 4 ) {
   $('canvas#background').addClass('sunriseBg');
   $('div.sun').addClass('sunrise');
-}
-
-// cherry blossom
-
-if ( true ) {
-  $('canvas#background').addClass('blossom');
+} else {   
+  $('canvas#background').addClass('blossom');   // cherry blossom
   $('div.sun').addClass('sunNoon');
   $('div.pedal').css('visibility', 'visible');
   sunnyCloud(500, 120);

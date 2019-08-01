@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get 'garden/team' => 'pages#team', :as => :garden_team
   resources :users, :only => [:new, :create, :update, :index]
   get '/users/edit' => 'users#edit', :as => :edit_user
-  resources :comments
+  resources :comments, :except => :index
   
 
   get '/login' => 'session#new'

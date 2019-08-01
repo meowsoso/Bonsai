@@ -9,7 +9,7 @@
     <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="hellooooooooooooo">
     ...
     </button>
-        <%= link_to @user.name, edit_comment_path(@user.id) %>
+        <%= link_to @user.name, edit_comment_path(@user.comments.last) %>
 </div>
 
 

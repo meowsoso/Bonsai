@@ -17,12 +17,12 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find params[:id]
+    @comment = @current_user.comments.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).first
     gon.current_user = @current_user
   end
 
   def update 
-    comment = Comment.find params[:id]
+    comment = @current_user.comments.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).first
     comment.update comment_params
     redirect_to comment
   end

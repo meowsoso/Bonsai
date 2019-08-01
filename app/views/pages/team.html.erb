@@ -7,7 +7,7 @@
     <% if user.id ==  @current_user.id %>
         <div class="tree <%= user.comments.last.emotion %> userTree">
             <p class="treeTag"><%= user.comments.last.content %></p>
-            <%= link_to user.name, comment_path(user.id) %>
+            <%= link_to user.name, comment_path((@user.comments.last)) %>
         </div>
     <% elsif user.comments.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).present? %>
         <div class="tree <%= user.comments.last.emotion %> tree<%= index %>">
