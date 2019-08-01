@@ -1,29 +1,98 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 * {box-sizing: border-box;}
 
 body {
   min-width: 1300px;
   height: 900px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+a .gardenSwap {
+    display: inline-block;
+    height: 120px;
+    max-width: 120px;
+    left: 4%;
+    top: 50%;
+}
+a .gardenSwap:hover {
+    animation: swim 5s linear 0s infinite normal;
 }
 
-nav {
-    z-index: 3;
+@keyframes swim {
+    0% {}
+    50% { transform: rotate(-180deg);}
+    100% { transform: rotate(-359deg);}
+ 
+}
+
+div.welcomeBackground {
+    background: url('lily_in_rain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    min-width: 1300px;
+    min-height: 900px;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    text-align: center;
+  }
+
+  div.welcomeLogo {
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+      top: 280px;
+      width: 30%;
+      height: 35%;
+      color: white;
+      font-weight: 800;
+      line-height: 4em;
+    
+  }
+
+  div.userBackground {
+    background: url('seigaiha.png');
+    background-size: fill;
+    position: absolute;
+    min-width: 1300px;
+    min-height: 900px;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    text-align: center;
+  }
+
+.userBackground h1 {
+    visibility: hidden;
+}
+.userBackground h2 {
+    text-align: left;
+}
+
+div.monkey {
+    position: absolute;
+    display: flexbox;
+    min-width: 20%;
+    height: 50%; 
+    left: 20%;
+    top: 10%;
+    background: url('monkey.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:15px solid #dceaec;
+}
+
+
+div#signUp {
     text-align: right;
 }
 
-div.gardenSwap {
-    position: fixed;
-    display: inline-block;
-    height: 100px;
-    max-width: 6%;
-    left: 4%;
-    top: 40%;
-}
-div.gardenSwap a img{
-    max-width: 100%;
-}
 // Button used to open the chat form - fixed at the bottom of the page 
 .raindrop {
   position: absolute;
@@ -32,8 +101,8 @@ div.gardenSwap a img{
   height: 15px;
   background-color: rgba(54, 230, 230, 0.4);
   border-radius: 50%;
-  left: 200px;
-  top: 10px;
+  left: 0px;
+  top: 0px;
 
 }
 
@@ -414,7 +483,22 @@ div.alright:click {
   20%{ transform: rotate(0deg); -ms-transform: rotate(0deg); }
   }
 
+// .btn-secondary {
+//     top: 15%;
+//     left: 10%;
+// }
 
+div.tree a {
+    position: absolute;
+    background: url('signPost.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 45%;
+    width: 30%;
+    bottom: -15%;
+    right: 20%;
+}
 
 div.fire {
     display: inline-block;

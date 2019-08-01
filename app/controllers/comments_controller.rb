@@ -33,7 +33,8 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comment = Comment.find params[:id]
+    id = @current_user.id
+    @comments = Comment.where(user_id: id)
   end
 
   def destroy

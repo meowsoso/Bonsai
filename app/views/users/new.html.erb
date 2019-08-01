@@ -1,5 +1,6 @@
-<h1>New User</h1>
-
+<div class="userBackground">
+<h1>hi</h1>
+<h2>New User</h2>
 <% if @user.errors.any? %>
     <ol>
     <% @user.errors.full_messages.each do |message| %>
@@ -8,17 +9,38 @@
     </ol>
 <% end %>
 
+<div class="monkey">
+</div>
+
+<div class="row">
+    <div class="col col-md-8"></div>
+    <div class="col col-md-3">
 <%= form_for @user do |f| %>
+<div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control" %>
+ </div>
+ <div class="form-group">  
     <%= f.label :email %>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :id => "exampleInputEmail1", :class => "form-control", :placeholder => "Enter email" %>
+     </div>
+ <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, :class => "form-control", :id => "exampleInputPassword1", :placeholder => "Enter password" %>
+     </div>
+ <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, :class => "form-control", :id => "exampleInputPassword1", :placeholder => "Confirm password" %>
+    </div>
+ <div class="form-group">
     <%= f.label :team_id %>
     <%= f.select :team_id, Team.all.collect { |t| [t.name, t.id] } %>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-
-    <%= f.submit "Sign up"%>
+     </div>
+<div class="form-group" id="signUp">
+    <%= f.submit "Sign up", :class => "btn btn-outline-info btn-sm" %>
+    </div>
+    </div>
+    <div class="col col-md-3">
+</div>
     <% end %>
+</div>

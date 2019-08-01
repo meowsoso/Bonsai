@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :check_for_login
+  before_action :check_for_login, :except => :new
   before_action :check_for_daily_comment, :only => [:garden, :team]
 
   def new

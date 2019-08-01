@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   before_action :check_for_admin, :only => [:index]
   
   def new
+    if @current_user.present? 
+      redirect_to new_comment_path
+    end
     @user = User.new
   end
   

@@ -6,13 +6,14 @@
 
 
 <div class="tree <%= @user.comments.last.emotion %> userTree">
-    <p class="treeTag"><%= @user.comments.last.content %></p>
-        <%= link_to @user.name, comment_path(@user.id) %>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="hellooooooooooooo">
+    ...
+    </button>
+        <%= link_to @user.name, edit_comment_path(@user.id) %>
 </div>
 
-<div class="gardenSwap">
-<%= link_to image_tag('swap.png'), garden_team_path %>
-</div>
+
+<%= link_to image_tag('swap.png', :class => "gardenSwap"), garden_team_path %>
 
 <div class="cloud">
     <ul class="centered-clouds">
