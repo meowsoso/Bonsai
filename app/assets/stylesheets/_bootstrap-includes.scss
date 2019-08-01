@@ -6,7 +6,7 @@
 * {box-sizing: border-box;}
 
 body {
-  min-width: 1300px;
+  max-width: 100vw;
   height: 900px;
   margin: 0;
   padding: 0;
@@ -34,8 +34,8 @@ div.welcomeBackground {
     background: url('lily_in_rain.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    min-width: 1300px;
+    // position: absolute;
+    max-width: 100vw;
     min-height: 900px;
     top: 0;
     left: 0;
@@ -68,9 +68,6 @@ div.welcomeBackground {
     text-align: center;
   }
 
-.userBackground h1 {
-    visibility: hidden;
-}
 .userBackground h2 {
     text-align: left;
 }

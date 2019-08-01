@@ -9,9 +9,10 @@ jQuery(document).ready(function($){
   // generate raindrop in different location
   const randomRain = function (rain) {
     console.log('hello');
-    var posx = (Math.random() * ($(document).width()*0.9)).toFixed();
+    var posx = (Math.random() * ($(document).width()*0.95)).toFixed();
     // var posy = (Math.random() * ($(document).height() * 0.1)).toFixed();
     $('div.raindrop').clone().css({
+      'z-index': '-1',
       'left': posx+'px',
       'top': '0px'
     }).addClass(`${ rain }`).removeClass('raindrop').appendTo('body');
@@ -25,7 +26,7 @@ const rainEffect =function (divClass, speed) {
   };
     anime({
     targets: `div.${ divClass }`,
-    translateY: 700,
+    translateY: window.innerHeight,
     easing: 'easeInOutSine',
     delay: anime.stagger(speed),
     loop: true
@@ -72,7 +73,7 @@ const createLight = function (posX, posY) {
 
 // create white clouds
 const createCloud = function (positionX, positionY) {
-  $('div.cloud').clone().delay(1500).css({
+  $('div.cloud').clone().css({
     'visibility': 'visible',
     'left': positionX +'px',
     'top': positionY +'px'
@@ -141,15 +142,20 @@ if ($('div.angry').length > 0) {
 // storm scenario
 if ( gon.score > 6 ) {
   $('canvas#background').addClass('storm');
-  createCloud(400, 170);
-  createCloud(350, 100);
-  createCloud(500, 120);
-  createCloud(400, 170);
-  createCloud(350, 100);
-  createCloud(400, 170);
-  createCloud(350, 100);
-  createCloud(150, 100);
-  createCloud(650, 150);  
+  const width = window.innerWidth;
+
+  createCloud(getRandomInt(0, width), 170);
+  createCloud(getRandomInt(0, width), 200);
+  createCloud(getRandomInt(0, width), 220);
+  createCloud(getRandomInt(0, width), 230);
+  createCloud(getRandomInt(0, width), 190);
+  createCloud(getRandomInt(0, width), 170);
+  createCloud(getRandomInt(0, width), 160);
+  createCloud(getRandomInt(0, width), 190);
+  createCloud(getRandomInt(0, width), 250);  
+  createCloud(getRandomInt(0, width), 160);
+  createCloud(getRandomInt(0, width), 190);
+  createCloud(getRandomInt(0, width), 250);
   moveClouds();
   
   rainEffect('rain', 65);
