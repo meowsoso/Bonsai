@@ -126,7 +126,7 @@ const fallSakura = function () {
     duration: 7000,
     delay: anime.stagger(300)
   });
-}
+};
 
 // move fire when clicked 
 if ($('div.angry').length > 0) {
@@ -135,14 +135,20 @@ if ($('div.angry').length > 0) {
     $(this).css({
       'top': `${getRandomInt(0, 100)}%`,
       'left': `${getRandomInt(0, 100)}%`
-    })
+    });
   });
-}
+};
+
+// show message when click tree
+$('div.tree').on('click', function() {
+  $('div.tree p.treeTag').css('display', 'absolute');
+});
+
+const width = window.innerWidth;
 
 // storm scenario
 if ( gon.score > 6 ) {
   $('canvas#background').addClass('storm');
-  const width = window.innerWidth;
 
   createCloud(getRandomInt(0, width), 170);
   createCloud(getRandomInt(0, width), 200);
@@ -173,12 +179,15 @@ createLight(relativeX, relativeY);
 } else if ( gon.score > 4 ) {
   $('canvas#background').addClass('sunriseBg');
   $('div.sun').addClass('sunrise');
+  sunnyCloud(getRandomInt(0, width), 250);
+  sunnyCloud(getRandomInt(0, width), 200);
+  moveClouds();
 } else {   
   $('canvas#background').addClass('blossom');   // cherry blossom
   $('div.sun').addClass('sunNoon');
   $('div.pedal').css('visibility', 'visible');
-  sunnyCloud(500, 120);
-  sunnyCloud(800, 200);
+  sunnyCloud(getRandomInt(0, width), 250);
+  sunnyCloud(getRandomInt(0, width), 200);
   moveClouds();
 
   $('div.pedal').on('click', function() {
@@ -189,5 +198,6 @@ createLight(relativeX, relativeY);
     }
   });
 }
+
 
 });

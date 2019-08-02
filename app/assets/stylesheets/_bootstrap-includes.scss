@@ -18,6 +18,7 @@ a .gardenSwap {
     max-width: 120px;
     left: 4%;
     top: 50%;
+    z-index: 10;
 }
 a .gardenSwap:hover {
     animation: swim 5s linear 0s infinite normal;
@@ -31,7 +32,7 @@ a .gardenSwap:hover {
 }
 
 div.welcomeBackground {
-    background: url('lily_in_rain.jpg');
+    background: url('/assets/lily_in_rain.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     // position: absolute;
@@ -57,17 +58,15 @@ div.welcomeBackground {
   }
 
   div.userBackground {
-    background: url('seigaiha.png');
+    background: url('/assets/seigaiha.png');
     background-size: fill;
-    position: absolute;
-    min-width: 1300px;
+    max-width: 100vw;
     min-height: 900px;
     top: 0;
     left: 0;
     z-index: -2;
-    text-align: center;
+    // text-align: center;
   }
-
 .userBackground h2 {
     text-align: left;
 }
@@ -79,7 +78,7 @@ div.monkey {
     height: 65%; 
     left: 20%;
     top: 15%;
-    background: url('monkey.jpg');
+    background: url('/assets/monkey.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border:15px solid #dceaec;
@@ -92,7 +91,7 @@ div.redMonkey {
     height: 55%;
     left: 20%;
     top: 15%;
-    background: url('red_monkey.jpg');
+    background: url('/assets/red_monkey.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border:15px solid #dceaec;
@@ -274,7 +273,7 @@ canvas#background {
 }
 
 canvas.storm {
-    background: url('the_great_wave.jpg');
+    background: url('/assets/the_great_wave.jpg');
     filter: brightness(50%);
 }
 
@@ -292,7 +291,7 @@ canvas.thunderBackground{
   
 
 canvas.sunriseBg {
-    background: url('sun_rise.jpg');
+    background: url('/assets/sun_rise.jpg');
     filter:  brightness(90%) contrast(90%) hue-rotate(60deg);
     animation: backgroundSunRise  20s ease-out 0s 1 normal;
     animation-fill-mode: forwards;
@@ -305,7 +304,7 @@ canvas.sunriseBg {
 }
 
 canvas.blossom {
-    background: url('sakura.jpg');
+    background: url('/assets/sakura.jpg');
 
 }
 
@@ -368,7 +367,7 @@ div.sunset{
 }
 
 div.pedal {
-  background: url('sakura_pedal.png');
+  background: url('/assets/sakura_pedal.png');
   background-size: cover;
   position: fixed;
   display: flexbox;
@@ -380,7 +379,7 @@ div.pedal {
 }
 
 div.pedal1 {
-  background: url('sakura_pedal.png');
+  background: url('/assets/sakura_pedal.png');
   background-size: cover;
   position: fixed;
   display: flexbox;
@@ -397,7 +396,7 @@ div.tree {
   height: 230px;
   min-width: 230px;
   display: inline-block;
-  background: url('jptree.png');
+  background: url('/assets/jptree.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -413,7 +412,7 @@ div.tree1 {
     bottom: 5%;
     height: 200px;
     max-width: 10%;
-    background: url('team_tree.png');
+    background: url('/assets/team_tree.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -424,7 +423,7 @@ div.tree2 {
     bottom: 15%;
     height: 200px;
     max-width: 10%;
-    background: url('team_tree2.png');
+    background: url('/assets/team_tree2.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -435,7 +434,7 @@ div.tree3 {
     bottom: 30%;
     height: 200px;
     max-width: 10%;
-    background: url('team_tree3.png');
+    background: url('/assets/team_tree3.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -446,7 +445,7 @@ div.tree4 {
     bottom: 5%;
     height: 200px;
     max-width: 10%;
-    background: url('team_tree.png');
+    background: url('/assets/team_tree.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -492,14 +491,18 @@ div.alright:click {
   20%{ transform: rotate(0deg); -ms-transform: rotate(0deg); }
   }
 
-// .btn-secondary {
-//     top: 15%;
-//     left: 10%;
-// }
+p.treeTag {
+    top: 0%;
+    left: 10%;
+    font-weight: 800;
+    font-size: 1.3em;
+    color: black;
 
-div.tree a {
+}
+
+p.nameTag{
     position: absolute;
-    background: url('signPost.png');
+    background: url('/assets/signPost.png');
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
@@ -507,12 +510,20 @@ div.tree a {
     width: 30%;
     bottom: -15%;
     right: 20%;
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
 }
 
+p.nameTag a {
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+}
 div.fire {
     display: inline-block;
     position: absolute;
-    background: url('fire.png');
+    background: url('/assets/fire.png');
     background-position: center;
     background-size: cover;
     z-index: 2;

@@ -15,8 +15,8 @@ class PagesController < ApplicationController
   def team
     @score = team_score
     gon.score = @score
-    user = User.find @current_user.id
-    @team = user.team
+    @user = User.find @current_user.id
+    @team = @user.team
   end
 
 

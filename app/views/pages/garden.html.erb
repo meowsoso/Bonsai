@@ -6,10 +6,9 @@
 
 
 <div class="tree <%= @user.comments.last.emotion %> userTree">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="hellooooooooooooo">
-    ...
-    </button>
-        <%= link_to @user.name, edit_comment_path(@user.comments.last) %>
+        <p class="treeTag"><%= @user.comments.last.content %></p>
+
+       <p class="nameTag"><%= link_to @user.name, edit_comment_path(@user.comments.last) %></p>
 </div>
 
 
