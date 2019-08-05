@@ -44,7 +44,7 @@ div.welcomeBackground {
     text-align: center;
   }
 
-  div.welcomeLogo {
+div.welcomeLogo {
       display: inline-block;
       margin: 0 auto;
       position: relative;
@@ -55,7 +55,11 @@ div.welcomeBackground {
       font-weight: 800;
       line-height: 4em;
     
-  }
+}
+div.welcomeLogo p {
+    font-size: 1.5em;
+}
+
 
   div.userBackground {
     background: url('/assets/seigaiha.png');

@@ -140,9 +140,6 @@ if ($('div.angry').length > 0) {
 };
 
 // show message when click tree
-$('div.tree').on('click', function() {
-  $('div.tree p.treeTag').css('display', 'absolute');
-});
 
 const width = window.innerWidth;
 
