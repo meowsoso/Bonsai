@@ -1,13 +1,13 @@
 User.destroy_all
 puts "creating users"
-u1 = User.create :name => 'Bruce Wayne', :email => 'bruce@batman.com', :admin => true, :password => '123'
+u1 = User.create :name => 'Bruce Wayne', :email => 'bruce@ga.co', :admin => true, :password => '123'
 u2 = User.create :name => 'Flash', :email => 'robin@hood.com', :admin => false, :password => '123'
 u3 = User.create :name => 'Aqua Man', :email => 'aqua@man.com', :admin => false, :password => '123'
-u4 = User.create :name => 'Mighty Thor', :email => 'thor@marvel.com', :admin => true, :password => '123'
+u4 = User.create :name => 'Mighty Thor', :email => 'thor@ga.co', :admin => true, :password => '123'
 u5 = User.create :name => 'Hulk', :email => 'may3@may.com', :admin => false, :password => '123'
 u6 = User.create :name => 'Spider Man', :email => 'may4@may.com', :admin => false, :password => '123'
 u7 = User.create :name => 'Black Widow', :email => 'may5@may.com', :admin => false, :password => '123'
-u8 = User.create :name => 'Banana Lover', :email => 'min@nion.com', :admin => true, :password => '123'
+u8 = User.create :name => 'Banana Lover', :email => 'minion@ga.co', :admin => true, :password => '123'
 u9 = User.create :name => 'Yellow Thing', :email => 'minion@may.com', :admin => false, :password => '123'
 
 
