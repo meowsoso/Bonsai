@@ -36,6 +36,6 @@ This page is deployed with Heroku and demo page could be found at:
 - Account: thor@marevel.com, password: 123 (team with mixed performances)
 - Account: min@nion.com, password: 123 (team with bad performances)
 
-Things you may want to cover:
-
+### Acknowledgement
+Thank you my teacher Joel and TA Rashida for guidance. And also grateful for help and support from classmates especially Ayush, Victor and Gopi. Much thanks and love to my partner Jimmy for his patience and help. 
 
