@@ -1,111 +1,116 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 body {
   max-width: 100vw;
   height: 900px;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
 }
 a .gardenSwap {
-    display: inline-block;
-    height: 120px;
-    max-width: 120px;
-    left: 4%;
-    top: 50%;
-    z-index: 10;
+  display: inline-block;
+  height: 120px;
+  max-width: 120px;
+  left: 4%;
+  top: 50%;
+  z-index: 10;
 }
 a .gardenSwap:hover {
-    animation: swim 5s linear 0s infinite normal;
+  animation: swim 5s linear 0s infinite normal;
 }
 
 @keyframes swim {
-    0% {}
-    50% { transform: rotate(-180deg);}
-    100% { transform: rotate(-359deg);}
- 
+  0% {
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-359deg);
+  }
 }
 
 div.welcomeBackground {
-    background: url('/assets/lily_in_rain.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    // position: absolute;
-    max-width: 100vw;
-    min-height: 900px;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    text-align: center;
-  }
+  background: url("/assets/lily_in_rain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // position: absolute;
+  max-width: 100vw;
+  min-height: 900px;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  text-align: center;
+}
 
 div.welcomeLogo {
-      display: inline-block;
-      margin: 0 auto;
-      position: relative;
-      top: 280px;
-      width: 30%;
-      height: 35%;
-      color: white;
-      font-weight: 800;
-      line-height: 4em;
-    
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  top: 280px;
+  width: 30%;
+  height: 35%;
+  color: white;
+  font-weight: 800;
+  line-height: 4em;
 }
 div.welcomeLogo p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
-
-  div.userBackground {
-    background: url('/assets/seigaiha.png');
-    background-size: fill;
-    max-width: 100vw;
-    min-height: 900px;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    // text-align: center;
-  }
+div.userBackground {
+  background: url("/assets/seigaiha.png");
+  background-size: fill;
+  max-width: 100vw;
+  min-height: 900px;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  // text-align: center;
+}
 .userBackground h2 {
-    text-align: left;
+  text-align: left;
 }
 
 div.monkey {
-    position: absolute;
-    display: flexbox;
-    min-width: 20%;
-    height: 65%; 
-    left: 20%;
-    top: 15%;
-    background: url('/assets/monkey.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border:15px solid #dceaec;
+  position: absolute;
+  display: flexbox;
+  min-width: 20%;
+  height: 65%;
+  left: 20%;
+  top: 15%;
+  background: url("/assets/monkey.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 15px solid #dceaec;
 }
 
 div.redMonkey {
-    position: absolute;
-    display: flexbox;
-    min-width: 35%;
-    height: 55%;
-    left: 20%;
-    top: 15%;
-    background: url('/assets/red_monkey.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border:15px solid #dceaec;
+  position: absolute;
+  display: flexbox;
+  min-width: 35%;
+  height: 55%;
+  left: 20%;
+  top: 15%;
+  background: url("/assets/red_monkey.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 15px solid #dceaec;
 }
 
 div#signUp {
-    text-align: right;
+  text-align: right;
 }
 
-// Button used to open the chat form - fixed at the bottom of the page 
+// Button used to open the chat form - fixed at the bottom of the page
 .raindrop {
   position: absolute;
   display: inline-block;
@@ -115,7 +120,7 @@ div#signUp {
   border-radius: 50%;
   left: 0px;
   top: 0px;
-
+  z-index: -1;
 }
 
 .rain {
@@ -127,7 +132,6 @@ div#signUp {
   border-radius: 50%;
   left: 200px;
   top: 10px;
-
 }
 
 .rain2 {
@@ -139,7 +143,6 @@ div#signUp {
   border-radius: 50%;
   left: 200px;
   top: 10px;
-
 }
 
 .rain3 {
@@ -151,10 +154,10 @@ div#signUp {
   border-radius: 50%;
   left: 200px;
   top: 10px;
-
 }
 
-.anim, .anim svg {
+.anim,
+.anim svg {
   position: relative;
   width: 100%;
   min-height: 900px;
@@ -164,23 +167,23 @@ div#signUp {
   stroke: rgb(240, 240, 115);
 }
 
-div.cloud{
+div.cloud {
   position: absolute;
   display: flexbox;
   width: 25%;
   height: 15%;
   top: 15%;
-  visibility: hidden
+  visibility: hidden;
 }
-div.cloud1{
+div.cloud1 {
   position: absolute;
   display: flexbox;
   width: 25%;
   height: 15%;
   top: 15%;
-  visibility: hidden
+  visibility: hidden;
 }
-.centered-clouds{
+.centered-clouds {
   position: relative;
   top: 20%;
   z-index: 3;
@@ -193,52 +196,51 @@ div.cloud1{
   transform: scaleY(-1) translateY(125px);
 }
 
-
 @keyframes cloud {
-  0%{
+  0% {
     height: 100px;
     width: 100px;
   }
-  50%{
+  50% {
     height: 50px;
     width: 50px;
   }
-  100%{
+  100% {
     height: 100px;
     width: 100px;
   }
 }
 
 @keyframes cloud-mini {
-  0%{
+  0% {
     height: 40px;
     width: 40px;
   }
-  50%{
+  50% {
     height: 60px;
     width: 60px;
   }
-  100%{
+  100% {
     height: 40px;
     width: 40px;
   }
 }
 @keyframes cloud-big {
-  0%{
+  0% {
     height: 115px;
     width: 115px;
   }
-  50%{
+  50% {
     height: 75px;
     width: 75px;
   }
-  100%{
+  100% {
     height: 115px;
     width: 115px;
   }
 }
 
-.centered-clouds>li{
+.centered-clouds > li {
   background-color: rgb(156, 150, 150);
   display: inline-block;
   vertical-align: top;
@@ -249,20 +251,20 @@ div.cloud1{
   border-bottom-right-radius: 1000px;
 }
 
-.centered-clouds>li:nth-child(3){
+.centered-clouds > li:nth-child(3) {
   animation: cloud-big 50s ease-in-out infinite -25s;
 }
 
-.centered-clouds>li:nth-child(2){
+.centered-clouds > li:nth-child(2) {
   animation: cloud 23s ease-in-out infinite -8s;
 }
 
-.centered-clouds>li:first-child{
+.centered-clouds > li:first-child {
   border-top-left-radius: 1000px;
   animation: cloud-mini 10s ease-in-out infinite -55s;
 }
 
-.centered-clouds>li:last-child{
+.centered-clouds > li:last-child {
   border-top-right-radius: 1000px;
   animation: cloud-mini 7s ease-in-out infinite -60s;
 }
@@ -273,97 +275,144 @@ canvas#background {
   top: 0;
   left: 0;
   display: flexbox;
-  z-index: -2
+  z-index: -2;
 }
 
 canvas.storm {
-    background: url('/assets/the_great_wave.jpg');
-    filter: brightness(50%);
+  background: url("/assets/the_great_wave.jpg");
+  filter: brightness(50%);
 }
 
-canvas.thunderBackground{
-    animation: storm 1.5s ease 0s 1 normal;
+canvas.thunderBackground {
+  animation: storm 1.5s ease 0s 1 normal;
 }
-  
+
 @keyframes storm {
-    0% { filter: saturate(0.5) brightness(20%);}
-    40% { filter: saturate(0.7) brightness(160%);}
-    55% { filter: saturate(0.5) brightness(60%);}
-    70% { filter: saturate(0.7) brightness(190%);}
-    100% { filter: saturate(0.5) brightness(50%);}
+  0% {
+    filter: saturate(0.5) brightness(20%);
+  }
+  40% {
+    filter: saturate(0.7) brightness(160%);
+  }
+  55% {
+    filter: saturate(0.5) brightness(60%);
+  }
+  70% {
+    filter: saturate(0.7) brightness(190%);
+  }
+  100% {
+    filter: saturate(0.5) brightness(50%);
+  }
 }
-  
 
 canvas.sunriseBg {
-    background: url('/assets/sun_rise.jpg');
-    filter:  brightness(90%) contrast(90%) hue-rotate(60deg);
-    animation: backgroundSunRise  20s ease-out 0s 1 normal;
-    animation-fill-mode: forwards;
+  background: url("/assets/sun_rise.jpg");
+  filter: brightness(90%) contrast(90%) hue-rotate(60deg);
+  animation: backgroundSunRise 20s ease-out 0s 1 normal;
+  animation-fill-mode: forwards;
 }
 
 @keyframes backgroundSunRise {
-    0% { filter: brightness(90%) contrast(90%) hue-rotate(60deg);}
-    50% { filter: brightness(95%) contrast(95%) hue-rotate(30deg);}
-    100% { filter: brightness(100%) contrast(100%) hue-rotate(0deg);}
+  0% {
+    filter: brightness(90%) contrast(90%) hue-rotate(60deg);
+  }
+  50% {
+    filter: brightness(95%) contrast(95%) hue-rotate(30deg);
+  }
+  100% {
+    filter: brightness(100%) contrast(100%) hue-rotate(0deg);
+  }
 }
 
 canvas.blossom {
-    background: url('/assets/sakura.jpg');
-
+  background: url("/assets/sakura.jpg");
 }
-
 
 div.sunrise {
   position: fixed;
   display: flexbox;
   width: 100px;
   height: 100px;
-  background-image: linear-gradient(to bottom, rgb(211, 91, 35) 40%,rgba(255, 213, 25, 1) 68%,rgba(255, 201, 25, 1) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(211, 91, 35) 40%,
+    rgba(255, 213, 25, 1) 68%,
+    rgba(255, 201, 25, 1) 100%
+  );
   box-shadow: 0px 0px 60px 20px rgba(223, 187, 30, 0.6);
   top: 50%;
   left: 10%;
   border-radius: 50%;
-  animation: rise  20s ease-out 0s 1 normal;
+  animation: rise 20s ease-out 0s 1 normal;
   animation-fill-mode: forwards;
 }
 
 @keyframes rise {
-    0% { transform: translateX(0) translateY(0); filter: brightness(70%) saturate(70%); }
-    25% { transform: translateX(50px) translateY(-60px); filter: brightness(80%) saturate(80%);}
-    40% { transform: translateX(65px) translateY(-70px); filter: brightness(85%) saturate(85%);}
-    50% {transform: translateX(80px) translateY(-80px); filter: brightness(95%) saturate(90%);}
-    75% {transform: translateX(120px) translateY(-110px); filter: brightness(100%) saturate(95%);}
-    100% {transform: translateX(150px) translateY(-150px); filter: brightness(110%) saturate(100%);}
+  0% {
+    transform: translateX(0) translateY(0);
+    filter: brightness(70%) saturate(70%);
+  }
+  25% {
+    transform: translateX(50px) translateY(-60px);
+    filter: brightness(80%) saturate(80%);
+  }
+  40% {
+    transform: translateX(65px) translateY(-70px);
+    filter: brightness(85%) saturate(85%);
+  }
+  50% {
+    transform: translateX(80px) translateY(-80px);
+    filter: brightness(95%) saturate(90%);
+  }
+  75% {
+    transform: translateX(120px) translateY(-110px);
+    filter: brightness(100%) saturate(95%);
+  }
+  100% {
+    transform: translateX(150px) translateY(-150px);
+    filter: brightness(110%) saturate(100%);
+  }
 }
 
-
-div.sunNoon{
+div.sunNoon {
   position: fixed;
   display: flexbox;
   width: 130px;
   height: 130px;
-  background-image: radial-gradient(#f8b500 20%, #FFD200 50%, #fceabb 90%);
+  background-image: radial-gradient(#f8b500 20%, #ffd200 50%, #fceabb 90%);
   top: 10%;
   left: 15%;
   border-radius: 50%;
   box-shadow: 0px 0px 50px 20px rgba(223, 156, 30, 0.6);
   animation: shinningSun 3s ease-out 0s infinite normal;
-} 
-
-@keyframes shinningSun {
-    0% { filter: brightness(100%) contrast(100%) hue-rotate(0deg); box-shadow: 0px 0px 50px 30px rgba(223, 156, 30, 0.8);}
-    50% { filter: brightness(130%) contrast(100%) hue-rotate(5deg);box-shadow: 0px 0px 40px 50px rgba(223, 101, 30, 0.7);}
-    100% { filter: brightness(100%) contrast(100%) hue-rotate(0deg);box-shadow: 0px 0px 50px 30px rgba(223, 156, 30, 0.8);}
 }
 
+@keyframes shinningSun {
+  0% {
+    filter: brightness(100%) contrast(100%) hue-rotate(0deg);
+    box-shadow: 0px 0px 50px 30px rgba(223, 156, 30, 0.8);
+  }
+  50% {
+    filter: brightness(130%) contrast(100%) hue-rotate(5deg);
+    box-shadow: 0px 0px 40px 50px rgba(223, 101, 30, 0.7);
+  }
+  100% {
+    filter: brightness(100%) contrast(100%) hue-rotate(0deg);
+    box-shadow: 0px 0px 50px 30px rgba(223, 156, 30, 0.8);
+  }
+}
 
-
-div.sunset{
+div.sunset {
   position: absolute;
   display: flexbox;
   width: 160px;
   height: 160px;
-  background-image: linear-gradient(to bottom, rgb(226, 35, 9) 0%,rgba(226, 123, 26, 0.7) 68%,rgba(255,222,25, 0.5) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(226, 35, 9) 0%,
+    rgba(226, 123, 26, 0.7) 68%,
+    rgba(255, 222, 25, 0.5) 100%
+  );
   box-shadow: 5px 5px 20px 10px rgba(221, 51, 9, 0.4);
   top: 35%;
   left: 85%;
@@ -371,7 +420,7 @@ div.sunset{
 }
 
 div.pedal {
-  background: url('/assets/sakura_pedal.png');
+  background: url("/assets/sakura_pedal.png");
   background-size: cover;
   position: fixed;
   display: flexbox;
@@ -383,7 +432,7 @@ div.pedal {
 }
 
 div.pedal1 {
-  background: url('/assets/sakura_pedal.png');
+  background: url("/assets/sakura_pedal.png");
   background-size: cover;
   position: fixed;
   display: flexbox;
@@ -400,59 +449,58 @@ div.tree {
   height: 230px;
   min-width: 230px;
   display: inline-block;
-  background: url('/assets/jptree.png');
+  background: url("/assets/jptree.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 3;
-
 }
 div.userTree {
-    left: 5%;
+  left: 5%;
 }
 
 div.tree1 {
-    left: 25%;
-    bottom: 5%;
-    height: 200px;
-    max-width: 10%;
-    background: url('/assets/team_tree.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  left: 25%;
+  bottom: 5%;
+  height: 200px;
+  max-width: 10%;
+  background: url("/assets/team_tree.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div.tree2 {
-    left: 70%;
-    bottom: 15%;
-    height: 200px;
-    max-width: 10%;
-    background: url('/assets/team_tree2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  left: 70%;
+  bottom: 15%;
+  height: 200px;
+  max-width: 10%;
+  background: url("/assets/team_tree2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div.tree3 {
-    left: 25%;
-    bottom: 30%;
-    height: 200px;
-    max-width: 10%;
-    background: url('/assets/team_tree3.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  left: 25%;
+  bottom: 30%;
+  height: 200px;
+  max-width: 10%;
+  background: url("/assets/team_tree3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div.tree4 {
-    left: 85%;
-    bottom: 5%;
-    height: 200px;
-    max-width: 10%;
-    background: url('/assets/team_tree.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  left: 85%;
+  bottom: 5%;
+  height: 200px;
+  max-width: 10%;
+  background: url("/assets/team_tree.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div.happy:hover {
@@ -460,11 +508,21 @@ div.happy:hover {
 }
 
 @keyframes changeHue {
-  0% { filter: hue-rotate(0deg);}
-  25% { filter: hue-rotate(90deg);}
-  50% { filter: hue-rotate(180deg);}
-  75% { filter: hue-rotate(270deg);}
-  100% { filter: hue-rotate(0deg);}
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    filter: hue-rotate(270deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
 }
 
 div.sad {
@@ -473,8 +531,12 @@ div.sad {
 }
 
 @keyframes turnBlack {
-  0% { filter: grayscale(0%) sepia(0);}
-  100% { filter: grayscale(100%) sepia(0.7);}
+  0% {
+    filter: grayscale(0%) sepia(0);
+  }
+  100% {
+    filter: grayscale(100%) sepia(0.7);
+  }
 }
 
 div.alright:click {
@@ -482,68 +544,103 @@ div.alright:click {
 }
 
 @keyframes shake {
-  0%{ transform: rotate(-15deg); -ms-transform: rotate(-15deg); }
-  2%{ transform: rotate(15deg); -ms-transform: rotate(15deg); }
-  4%{ transform: rotate(-18deg); -ms-transform: rotate(-18deg); }
-  6%{ transform: rotate(18deg); -ms-transform: rotate(18deg); }
-  8%{ transform: rotate(-22deg); -ms-transform: rotate(-22deg); }
-  10%{ transform: rotate(22deg); -ms-transform: rotate(22deg); }
-  12%{ transform: rotate(-18deg); -ms-transform: rotate(-18deg); }
-  14%{ transform: rotate(18deg); -ms-transform: rotate(-18deg); }
-  16%{ transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
-  18%{ transform: rotate(-12deg); -ms-transform: rotate(-12deg); }
-  20%{ transform: rotate(0deg); -ms-transform: rotate(0deg); }
+  0% {
+    transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
   }
-
-p.treeTag {
-    top: 0%;
-    left: 10%;
-    font-weight: 800;
-    font-size: 1.3em;
-    color: black;
-
+  2% {
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+  }
+  4% {
+    transform: rotate(-18deg);
+    -ms-transform: rotate(-18deg);
+  }
+  6% {
+    transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+  }
+  8% {
+    transform: rotate(-22deg);
+    -ms-transform: rotate(-22deg);
+  }
+  10% {
+    transform: rotate(22deg);
+    -ms-transform: rotate(22deg);
+  }
+  12% {
+    transform: rotate(-18deg);
+    -ms-transform: rotate(-18deg);
+  }
+  14% {
+    transform: rotate(18deg);
+    -ms-transform: rotate(-18deg);
+  }
+  16% {
+    transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+  }
+  18% {
+    transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+  }
+  20% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
 }
 
-p.nameTag{
-    position: absolute;
-    background: url('/assets/signPost.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    height: 45%;
-    width: 30%;
-    bottom: -15%;
-    right: 20%;
-    text-decoration: none;
-    font-weight: 800;
-    color: white;
+p.treeTag {
+  top: -8vh;
+  left: 10%;
+  font-weight: 800;
+  font-size: 1em;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5em;
+  padding: 0.2em;
+  max-width: 20vw;
+}
+
+p.nameTag {
+  position: absolute;
+  background: url("/assets/signPost.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 45%;
+  width: 30%;
+  bottom: -15%;
+  right: 20%;
+  text-decoration: none;
+  font-weight: 800;
+  color: white;
 }
 
 p.nameTag a {
-    text-decoration: none;
-    font-weight: 800;
-    color: white;
+  text-decoration: none;
+  font-weight: 800;
+  color: white;
 }
 div.fire {
-    display: inline-block;
-    position: absolute;
-    background: url('/assets/fire.png');
-    background-position: center;
-    background-size: cover;
-    z-index: 2;
-    width: 40px;
-    height: 50px;
-    animation: lightChange 4s infinite;
-    visibility: hidden; 
-    z-index: 5;
-  }
+  display: inline-block;
+  position: absolute;
+  background: url("/assets/fire.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  width: 40px;
+  height: 50px;
+  animation: lightChange 4s infinite;
+  visibility: hidden;
+  z-index: 5;
+}
 
-
- div.two {
-   top: 30%;
-   left: 10%;
- }
- div.three {
+div.two {
+  top: 30%;
+  left: 10%;
+}
+div.three {
   top: 15%;
   left: 30%;
 }
@@ -553,11 +650,22 @@ div.four {
 }
 
 @keyframes lightChange {
-  0% { filter: brightness(70%);}
-  40% { filter: contrast(1) brightness(80%);}
-  50% { filter: contrast(2) brightness(110%);}
-  60% { filter: sepia(1) contrast(2) brightness(110%);}
-  80% { filter: contrast(1) brightness(80%); }
-  100% { filter: brightness(70%);}
-} 
-
+  0% {
+    filter: brightness(70%);
+  }
+  40% {
+    filter: contrast(1) brightness(80%);
+  }
+  50% {
+    filter: contrast(2) brightness(110%);
+  }
+  60% {
+    filter: sepia(1) contrast(2) brightness(110%);
+  }
+  80% {
+    filter: contrast(1) brightness(80%);
+  }
+  100% {
+    filter: brightness(70%);
+  }
+}
